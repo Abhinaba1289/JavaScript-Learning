@@ -19,4 +19,10 @@ console.log(str);
 console.log(str.toUpperCase());
 console.log(str.trim());
 console.log(str.charAt(2));
+console.log(str.replace('A','K'))
+console.log(str.includes('A'))
 
+// string to array 
+let string = "Abhinaba-mukherjee-portfolio";
+const arr = string.split('-');
+console.log(arr)
