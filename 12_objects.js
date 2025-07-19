@@ -76,3 +76,46 @@ console.log(Object.keys(data))
 console.log(Object.values(data))
 console.log(Object.entries(data))
 console.log(data.hasOwnProperty('id'))
+console.log(" ")
+console.log(" ")
+console.log(" ")
+console.log(" ")
+
+
+// De-structure learning
+const course = {
+    courseName:"MERN Stack",
+    coursePrice: 10000,
+    courseId: 101
+}
+
+// console.log(course.courseName) it prits single value and to print all off them is hard so we will use destructure
+const {courseName:cn} = course;
+console.log(cn)
+
+
+// JSON
+/* 
+{
+    "courseName":"MERN Stack",
+    "coursePrice": 10000,
+    "courseId": 101
+}
+
+
+
+// in array formate -> it holds more objects 
+[
+    {
+        "courseName":"MERN Stack",
+        "coursePrice": 10000,
+        "courseId": 101
+    },
+    {
+        "courseName":"MERN Stack",
+        "coursePrice": 10000,
+        "courseId": 101
+    } .courseId.toExponential.apply.
+]
+    
+*/
