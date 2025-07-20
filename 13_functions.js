@@ -50,3 +50,85 @@ console.log( // directly passing an object
     b:21
     })
 )
+
+
+
+
+// arrow functions and this keyword
+
+const course = {
+    courseName:"MERN Stack",
+    coursePrice: 10000,
+    courseId: 101,
+    courseMessage: function(){
+        // console.log(`Learn the stack call ${courseName}`); // ReferenceError: courseName is not defined
+        console.log(`Learn the stack call ${this.courseName}`); // here we use this variable to get the course name inside the object or current context
+        console.log(this) // -> print the current context means the object course
+    }
+}
+
+
+course.courseMessage();
+console.log(this) // -> empty object {} in Npde environment but it different in browser -> browser gives a window object with all the events 
+
+
+
+// but in node when we log this it show this ->
+function abhi(){
+    console.log(this)
+}
+
+abhi() //->
+{/* <ref *1> Object [global] {
+  global: [Circular *1],
+  clearImmediate: [Function: clearImmediate],
+  setImmediate: [Function: setImmediate] {
+    [Symbol(nodejs.util.promisify.custom)]: [Getter]
+  },
+  clearInterval: [Function: clearInterval],
+  clearTimeout: [Function: clearTimeout],
+  setInterval: [Function: setInterval],
+  setTimeout: [Function: setTimeout] {
+    [Symbol(nodejs.util.promisify.custom)]: [Getter]
+  },
+  queueMicrotask: [Function: queueMicrotask],
+  structuredClone: [Function: structuredClone],
+  atob: [Getter/Setter],
+  btoa: [Getter/Setter],
+  performance: [Getter/Setter],
+  fetch: [Function: fetch],
+  crypto: [Getter]
+} */}
+
+
+// but we cannot access variable using this inside a function
+function chai() {
+    const name = "Abhi";
+    console.log(this.name) // it show undefined
+}
+chai()
+
+
+//  another way of function
+
+// function expression 
+const funExp = function(){
+    console.log("Abhi")
+}
+
+// annonymus function 
+// const funExp = (){
+//     console.log("Abhi")
+// }
+
+// arrow function 
+// const funExp = () =>{
+//     console.log("Abhi")
+// }
+
+// implecit return
+// let a = () => "Abhi"; // no return without {}
+// let a = () => ("Abhi") // no return without {}
+let a = num => "Abhi"; // no return without {}
+
+console.log(a(3))
