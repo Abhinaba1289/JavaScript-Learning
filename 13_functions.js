@@ -132,3 +132,10 @@ const funExp = function(){
 let a = num => "Abhi"; // no return without {}
 
 console.log(a(3))
+
+
+
+// Immediately Invoked Functon Expression ()() or IIFE
+(()=>{
+    console.log("DB Connected");
+})() // -> Immediately invoke function
