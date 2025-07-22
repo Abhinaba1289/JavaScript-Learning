@@ -138,4 +138,5 @@ console.log(a(3))
 // Immediately Invoked Functon Expression ()() or IIFE
 (()=>{
     console.log("DB Connected");
-})() // -> Immediately invoke function
+})() 
+// -> Immediately invoke function it is done for some initialization or setup code that you want to run immediately without polluting the global scope.
