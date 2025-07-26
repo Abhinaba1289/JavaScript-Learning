@@ -1,11 +1,11 @@
 function sayMyname() {
-    console.log("I am Abhi")
+    console.log("I am Abhi");
 }
 
-sayMyname()
-sayMyname()
-sayMyname() // calling function
-sayMyname // it is reference
+sayMyname();
+sayMyname();
+sayMyname(); // calling function
+sayMyname; // it is reference
 
 
 
@@ -13,7 +13,7 @@ function isLoggedIn(name = "Abhi") { // Default Parameters
     return `${name}! Welcome to the Show`;
 }
 
-console.log(isLoggedIn("Abhinaba"))
+console.log(isLoggedIn("Abhinaba"));
 
 
 function add(...a) { // a is now a array for -> here ... is rest operator
@@ -26,7 +26,7 @@ function add(...a) { // a is now a array for -> here ... is rest operator
 }
 
 let c = add(1,2,3,4,5,6);
-console.log(c) // -> undefined becase add() do not return something
+console.log(c); // -> undefined becase add() do not return something
 
 // for this -> function add(b, c, ...a) { return a} after first 2 variable rest values are stored in the array a -> [ 3, 4, 5, 6 ]
 
@@ -69,17 +69,17 @@ const course = {
 
 
 course.courseMessage();
-console.log(this) // -> empty object {} in Npde environment but it different in browser -> browser gives a window object with all the events 
+console.log(this); // -> empty object {} in Npde environment but it different in browser -> browser gives a window object with all the events 
 
 
 
 // but in node when we log this it show this ->
 function abhi(){
-    console.log(this)
+    console.log(this);
 }
 
-abhi() //->
-{/* <ref *1> Object [global] {
+abhi(); //->
+/* <ref *1> Object [global] {
   global: [Circular *1],
   clearImmediate: [Function: clearImmediate],
   setImmediate: [Function: setImmediate] {
@@ -98,22 +98,22 @@ abhi() //->
   performance: [Getter/Setter],
   fetch: [Function: fetch],
   crypto: [Getter]
-} */}
+} */
 
 
 // but we cannot access variable using this inside a function
 function chai() {
     const name = "Abhi";
-    console.log(this.name) // it show undefined
+    console.log(this.name);// it show undefined
 }
-chai()
+chai();
 
 
 //  another way of function
 
 // function expression 
 const funExp = function(){
-    console.log("Abhi")
+    console.log("Abhi");
 }
 
 // annonymus function 
@@ -129,14 +129,9 @@ const funExp = function(){
 // implecit return
 // let a = () => "Abhi"; // no return without {}
 // let a = () => ("Abhi") // no return without {}
-let a = num => "Abhi"; // no return without {}
+let a = num => "Abhi"+num; // no return without {}
 
-console.log(a(3))
+console.log(a(3));
 
 
 
-// Immediately Invoked Functon Expression ()() or IIFE
-(()=>{
-    console.log("DB Connected");
-})() 
-// -> Immediately invoke function it is done for some initialization or setup code that you want to run immediately without polluting the global scope.

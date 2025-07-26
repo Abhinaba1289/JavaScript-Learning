@@ -1,3 +1,7 @@
-a+" a inner")
-    console.log(b+" b inner")
-    console.log(c+
+
+    console.log("DB1 Connected");
+})();
+
+(()=>{
+    console.log("DB2 Connected");
+})();
