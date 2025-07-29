@@ -59,3 +59,30 @@ key: name => obj: John
 key: age => obj: 30
 key: city => obj: New York
 */
+
+let arr = [11,22,33,44,55,66,77,88,99];
+for (const key in arr) {
+    console.log(key) // it prints the index of the array
+    console.log(arr[key]) // it prints the value at that index
+}
+
+
+// For Each Loop 
+// arr.forEach(ele => {
+//     console.log(ele)
+// });
+/*11
+22
+33
+44
+55
+66
+77
+88
+99*/
+
+function print(params) {
+    console.log(params)
+}
+
+arr.forEach(print);
