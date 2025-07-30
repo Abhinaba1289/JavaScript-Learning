@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <h1>Learn Dom</h1>
+
+    <!-- id class is attribute -->
+    <div id="bg-black">
+        <h3>Hello World</h3>
+        <p class="text-white">This is a paragraph inside a black background.</p>
+        <button class="btn btn-primary">Click Me</button>
+    </div>
+
+    <!-- the difference between innerText and TextContent is that innerText return the current text with style applied like display none but the textContent will give the whole text it is not dependent on style applied like display none -->
+     <!-- lets apply this concept innertext and textContent -->
+      <div class="test-inner" id="test-inner-id">        <h1 style="color:white">Hello</h1>        <h1 style="color:white; display: none;">World</h1>
+      </div>
+
+
+
+      let's learn querySelector and querySelectorAll
+    <div id ="query-selector">
+        <h3>Abhi</h3>
+        <h3>Abha</h3>
+        <h3>Uvi</h3>
+        <h3>OV</h3>
+        <h3>Abhinaba</h3>
+    </div>
+
+
+
+
+    <script>
+        const bgColor = document.getElementById('bg-black');
+        bgColor.style = "Color : white;";
+        bgColor.style.backgroundColor = 'green';
+        document.body.style = " Color : white; background-color: black;"
+    </script>
+</body>
+</html>
