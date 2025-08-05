@@ -5,6 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DOM</title>
 </head>
+
+<style>
+    .selected{
+        color: black !important;
+        background-color: white !important;
+    }
+
+    .h-tags{
+        border: 2px solid white; color: white; border-radius: 15px; padding: 10px 20px;
+    }
+</style>
 <body>
     <h1>Learn Dom</h1>
 
@@ -22,13 +33,14 @@
 
 
 
-      let's learn querySelector and querySelectorAll
-    <div id ="query-selector">
-        <h3>Abhi</h3>
-        <h3>Abha</h3>
-        <h3>Uvi</h3>
-        <h3>OV</h3>
-        <h3>Abhinaba</h3>
+     <!-- let's learn querySelector and querySelectorAll -->
+      
+    <div id ="query-selector" style="cursor: pointer; display: flex; gap: 10px;">
+        <h3 class="h-tags" >Abhi</h3>
+        <h3 class="h-tags" >Abha</h3>
+        <h3 class="h-tags" >Uvi</h3>
+        <h3 class="h-tags" >OV</h3>
+        <h3 class="h-tags" >Abhinaba</h3>
     </div>
 
 
@@ -39,6 +51,20 @@
         bgColor.style = "Color : white;";
         bgColor.style.backgroundColor = 'green';
         document.body.style = " Color : white; background-color: black;"
+
+        const htags = document.querySelectorAll('.h-tags');
+
+        htags.forEach((tag) => {
+            tag.addEventListener('click' , () => {
+                htags.forEach((tag) => {
+                    tag.classList.remove('selected');
+                })
+                tag.classList.add('selected');
+            })
+        })
+        
+        
+        
     </script>
 </body>
 </html>

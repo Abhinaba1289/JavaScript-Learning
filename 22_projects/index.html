@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Converter</title>
+    <style>
+        #box {
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+            display: inline-block;
+            text-align: center;
+            line-height: 100px;
+            color: white;
+            font-weight: bold;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <div id="box" style=" background-color: red; ">red</div>
+    <div id="box" style=" background-color: green; ">green</div>
+    <div id="box" style=" background-color: yellow; ">yellow</div>
+    <div id="box" style=" background-color: purple;; ">purple</div>
+    <div id="box" style=" background-color: pink; ">pink</div>
+    <div id="box" style=" background-color: black; ">black</div>
+
+    <script>
+        document.body.addEventListener('click', (event) => {
+            if(event.target.id === 'box') {
+              console.log(event.target);
+              event.target.remove()
+            }
+        }, false)
+    </script>
+</body>
+</html>

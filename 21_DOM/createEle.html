@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: rgb(25, 25, 25); color: white; text-align: center; padding: 20px;">
+    <div>
+
+    </div>
+    <h4>languages</h4>
+    <ul>
+        
+    </ul>
+
+    <script>
+        function createElement(bgColor, pad, ele, text) {
+            const newElement = document.createElement(ele);
+            newElement.style.backgroundColor = bgColor;
+            newElement.style.padding = pad;
+            newElement.style.margin = pad;
+            newElement.style.borderRadius = pad;
+            
+            const newText = document.createTextNode(text);
+            newElement.appendChild(newText);
+            document.querySelector('div').appendChild(newElement);
+            // console.log(newElement)
+        }
+
+        createElement('grey', '10px', 'h1', 'Abhinaba Mukherjee');
+        createElement('grey', '10px', 'h4', 'Abhinaba Mukherjee');
+        createElement('grey', '10px', 'p', 'Abhinaba Mukherjee');
+
+
+        function addLangauges(language) {
+            const list = document.createElement('li');
+            list.appendChild(document.createTextNode(language));
+            document.querySelector('ul').appendChild(list);
+            console.log(list)
+        }
+
+        addLangauges('JavaScript');
+        addLangauges('Java');
+        addLangauges('C++');
+        addLangauges('React.JS');
+
+
+        const newList = document.createElement('li');
+        newList.textContent = 'C#';
+        console.log(newList)
+        document.querySelector('li:nth-child(4)').replaceWith(newList);
+
+
+        document.querySelector('li:nth-child(2)').remove(); 
+        // first-child and last-child are also available
+        document.querySelector('li:first-child').remove();
+        // document.querySelector('li:nth-child(2)').remove();
+        // document.querySelector('li:nth-child(1)').remove();
+    </script>
+</body>
+</html>
