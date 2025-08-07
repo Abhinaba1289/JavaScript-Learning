@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timer Stop and start Project</title>
+</head>
+
+<body
+    style="padding: 10px; height: 100vh; display: flex; flex-direction: column; justify-content:center; align-items: center;">
+    <div style="font-size: 50px; padding: 20px;" class="timer">
+        0
+    </div>
+    <button style="font-size: 25px; margin:10px; padding:10px;" class="start">Start</button>
+    <button style="font-size: 25px; margin:10px; padding:10px;" class="stop">Stop</button>
+    <button style="font-size: 25px; margin:10px; padding:10px;" class="reset">Reset</button>
+    <script>
+        const timer = document.querySelector('.timer');
+        const start = document.querySelector('.start');  
+        const stop = document.querySelector('.stop');
+        const reset = document.querySelector('.reset');
+
+        let time = 0;
+        intervalId = null;
+        
+        start.addEventListener('click', () => {
+            if (intervalId) {
+                return; // Prevent starting a new interval if one is already running
+            }
+            stop.innerHTML = 'Stop'
+            intervalId = setInterval(() => {
+                time++;
+                timer.innerHTML = time;
+            }, 1000)
+            
+        })
+
+        stop.addEventListener('click', () => {
+             clearInterval(intervalId);
+             stop.innerHTML = 'Stopped'
+                intervalId = null;
+        })
+        reset.addEventListener('click', () => {
+            clearInterval(intervalId);
+            timer.innerHTML = 0;
+            time = 0;
+            stop.innerHTML = 'Stop'
+            intervalId = null;
+        })
+        
+
+        
+    </script>
+</body>
+
+</html>
